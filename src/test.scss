@@ -1,0 +1,12 @@
+// Vendor prefixing for shorthand properties
+@mixin prefix($property, $value) {
+        -webkit-#{$property}: $value;
+        -moz-#{$property}: $value;
+        -ms-#{$property}: $value;
+        -o-#{$property}: $value;
+        #{$property}: $value;
+}
+
+.test {
+    @include prefix(transform,scale(1.5));
+}
